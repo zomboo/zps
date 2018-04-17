@@ -15,14 +15,14 @@ public class Post {
     @Column(nullable = false)
     private String body;
     @Column(nullable = false)
-    private User author;
+    private String author;
     @Column(nullable = false)
     private Date date = new Date();
 
     public Post() {
     }
 
-    public Post(Long id, String title, String body, User author, Date date) {
+    public Post(Long id, String title, String body, String author, Date date) {
         this.id = id;
         this.title = title;
         this.body = body;
@@ -53,7 +53,7 @@ public class Post {
         this.body = body;
     }
 
-    public void setAuthor(User author) {
+    public void setAuthor(String author) {
         this.author = author;
     }
 
